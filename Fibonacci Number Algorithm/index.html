@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let prev2 = 1;
+        let prev1 = 0;
+
+        console.log(prev1);
+        console.log(prev2);
+
+        for (let i = 0; i < 18; i++) {
+            let nextFibo = prev1 + prev2;
+            console.log(nextFibo);
+            prev1 = prev2;
+            prev2 = nextFibo;
+        }
+
+    </script>
+</body>
+</html>
