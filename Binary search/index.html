@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function binarySearch(arr, targetVal) {
+            let left = 0;
+            let right = arr.length - 1;
+
+            while (left <= right) {
+                let mid = Math.floor((left + right) / 2);
+
+                if (arr[mid] === targetVal) {
+                    return mid;
+                }
+
+                if (arr[mid] < targetVal) {
+                    left = mid + 1;
+                } else {
+                    right = mid - 1;
+                }
+            }
+
+            return -1;
+        }
+
+        const arr = [10, 20, 22, 30, 35, 40, 45, 52, 60];
+        const targetValue = 52;
+
+        let result = binarySearch(arr, targetValue);
+
+        if (result !== -1) {
+            console.log('Value', targetValue, 'is found at index', result);
+        } else {
+            console.log('Value', targetValue, 'is not found!');
+        }
+    </script>
+</body>
+</html>
