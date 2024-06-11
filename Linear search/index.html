@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [10, 75, 22, 23, 35, 40, 45];
+        const targetValue = 35;
+
+        let result = linearSearch(arr, targetValue);
+
+        function linearSearch(arr, targetValue) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == targetValue) {
+                    return i;
+                }
+            }
+            return -1
+        }
+
+        if (result !== -1) {
+            console.log('Value', targetValue, 'is found at index', result);
+        } else {
+            console.log('Value', targetValue, 'is not found!');
+        }
+    </script>
+</body>
+</html>
